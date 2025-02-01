@@ -21,6 +21,7 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      width: 300px;
     }
     #speed {
       font-size: 5em;
@@ -44,9 +45,17 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background 0.3s;
+      margin: 5px;
     }
     button:hover {
       background: #ff3b2f;
+    }
+    .metrics {
+      margin-top: 20px;
+      text-align: left;
+    }
+    .metrics div {
+      margin: 10px 0;
     }
     @keyframes pulse {
       from {
@@ -65,9 +74,14 @@
     <div id="unit">km/h</div>
     <div class="controls">
       <button id="toggleUnit">Switch to mph</button>
+      <button id="resetSpeed">Reset Speed</button>
       <button id="resetDistance">Reset Distance</button>
     </div>
-    <div>Distance Traveled: <span id="distance">0</span> km</div>
+    <div class="metrics">
+      <div>Distance Traveled: <span id="distance">0</span> km</div>
+      <div>Max Speed: <span id="maxSpeed">0</span> <span id="maxSpeedUnit">km/h</span></div>
+      <div>Avg Speed: <span id="avgSpeed">0</span> <span id="avgSpeedUnit">km/h</span></div>
+    </div>
   </div>
 
   <script src="speedometer.js"></script>
